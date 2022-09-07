@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main()
+int main1436()
 {
 	unsigned int n;
 	cin >> n;
