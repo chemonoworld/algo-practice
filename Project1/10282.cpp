@@ -2,6 +2,10 @@
 #include <string>
 #include <sstream>
 
+// 주의 해야할 점
+// getline 처음에 \n 입력 받더라.. cin buffer에 남아있어서 그런가?
+// 맞는 듯 그래서 cin.ignore로 버퍼 flush 해줌
+
 using namespace std;
 
 class MyStack {
@@ -61,14 +65,14 @@ public:
 };
 
 
-int main()
+int main10282()
 {
 	unsigned int orderCount;
 	cin >> orderCount;
 	
 	string buffer;
 	MyStack* myStack = new MyStack(orderCount);
-	getline(cin, buffer); // new line
+	cin.ignore();
 	for (size_t i = 0; i < orderCount; i++)
 	{
 		getline(cin, buffer);
