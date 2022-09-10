@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main()
+int main17298()
 {
 	unsigned int count;
 	cin >> count;
